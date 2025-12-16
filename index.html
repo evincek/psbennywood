@@ -10,22 +10,46 @@
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     />
     <link rel="stylesheet" href="css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   </head>
   <body>
-    <header>
-      <nav><!-- Simple menu links to other pages --></nav>
-    </header>
-    <main class="container-fluid">
+    
+    <main class="container">
       <section id="hero">
         <!-- Hero banner with welcome message -->
         <hgroup>
-          <h2>Get inspired with CSS</h2>
-          <p>How to use CSS to add glam to your Website?</p>
+          <h2>Rev. Bennywood Ministries</h2>
+          <p>Making Christ known, trough personal intimacy</p>
         </hgroup>
       </section>
       <section id="about"><!-- About the pastor --></section>
       <section id="ministry"><!-- Ministry details --></section>
     </main>
     <footer><!-- Copyright or contact info --></footer>
+    <script>
+
+      // H2: Scale up with rotation from left
+      gsap.from("#hero hgroup h2", {
+        duration: 1.2,
+        x: -200,
+        scale: 0.3,
+        rotation: -15,
+        opacity: 0,
+        ease: "back.out(1.7)",
+        transformOrigin: "center center"
+      });
+
+      // P: Bounce in from below with rotation
+      gsap.from("#hero hgroup p", {
+        duration: 1.5,
+        y: 150,
+        scale: 0.5,
+        rotation: 10,
+        opacity: 0,
+        delay: 0.7,
+        ease: "elastic.out(1, 0.95)",
+        transformOrigin: "center center"
+      });
+    </script>
   </body>
 </html>
