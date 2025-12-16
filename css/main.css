@@ -1,0 +1,5 @@
+    * {
+        background-color: #f8f5f1;
+        padding: clamp(0.5rem, 2vw, 1rem);
+
+    }
