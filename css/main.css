@@ -1,5 +1,10 @@
     * {
         background-color: #f8f5f1;
-        padding: clamp(0.5rem, 2vw, 1rem);
+        padding-left: clamp(0.5rem, 2vw, 1rem);
+        padding-right: clamp(0.5rem, 2vw, 1rem);
+    }
 
+    section#hero{
+        background-color: aqua;
+        z-index: 99;
     }
