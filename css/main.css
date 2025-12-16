@@ -4,7 +4,8 @@
         box-sizing: border-box;
     }
 
-    html, body {
+    html,
+    body {
         margin: 0;
         padding: 0;
         width: 100%;
@@ -13,6 +14,11 @@
 
     body {
         background-color: #f8f5f1;
+    }
+
+    #btn-hero.btn-hero {
+        width: 30%;
+        margin-top: 2rem;
     }
 
     main {
@@ -73,6 +79,12 @@
             background-size: cover;
             background-position: center;
         }
+
+         #btn-hero.btn-hero {
+        width: 70%;
+        /* margin-top: 2rem; */
+    }
+
     }
 
     section#hero::after {
@@ -103,7 +115,7 @@
         font-size: clamp(3rem, 8vw, 6rem);
         font-weight: 800;
         margin-bottom: 1.5rem;
-        line-height: 1.2;
+        line-height: 0.95;
     }
 
     section#hero hgroup p {
@@ -111,4 +123,11 @@
         font-size: clamp(1.5rem, 4vw, 2.5rem);
         font-weight: 600;
         line-height: 1.4;
+    }
+
+    /* About section responsive grid */
+    @media (max-width: 768px) {
+        #about .grid {
+            grid-template-columns: 1fr !important;
+        }
     }

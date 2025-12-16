@@ -9,24 +9,327 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css"
+    />
     <link rel="stylesheet" href="css/main.css" />
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   </head>
   <body>
-    
     <main class="container">
       <section id="hero">
         <!-- Hero banner with welcome message -->
         <hgroup>
           <h2>Rev. Bennywood Ministries</h2>
-          <p>Making Christ known, trough personal intimacy</p>
+          <p>Making Christ known, through personal intimacy</p>
+          <button id="btn-hero" class="pico-background-jade-950 btn-hero">
+            Discover more
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 0.5rem;
+              "
+            >
+              <path d="M12 5v14M19 12l-7 7-7-7" />
+            </svg>
+          </button>
         </hgroup>
       </section>
-      <section id="about"><!-- About the pastor --></section>
+      <section
+        id="about"
+        style="
+          padding: 4rem 2rem;
+          background: linear-gradient(135deg, #e8f4f8 0%, #d4e7ed 100%);
+        "
+      >
+        <div class="container">
+          <hgroup style="text-align: center; margin-bottom: 3rem">
+            <h2
+              style="
+                color: #2c5f77;
+                font-size: clamp(2.5rem, 5vw, 4rem);
+                font-weight: 700;
+              "
+            >
+              About Rev. Bennywood
+            </h2>
+            <p style="color: #4a7c8f; font-size: clamp(1.2rem, 2vw, 1.5rem)">
+              A beacon of light in our community
+            </p>
+          </hgroup>
+
+          <div class="grid" style="gap: 2rem">
+            <!-- Card 1 -->
+            <div
+              class="about-card"
+              style="
+                background: rgba(255, 255, 255, 0.7);
+                backdrop-filter: blur(10px);
+                padding: 2rem;
+                border-radius: 12px;
+                border-left: 4px solid #5a9fb8;
+                text-align: center;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#5a9fb8"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="margin: 0 auto 1.5rem"
+              >
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>
+              <h3
+                style="color: #2c5f77; font-size: 1.5rem; margin-bottom: 1rem"
+              >
+                Over 20 Years of Ministry
+              </h3>
+              <p style="color: #4a7c8f; line-height: 1.7">
+                With over two decades of dedicated ministry, Rev. Bennywood has
+                been a beacon of light in our community, guiding souls toward
+                faith, hope, and spiritual growth.
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="about-card"
+              style="
+                background: rgba(255, 255, 255, 0.7);
+                backdrop-filter: blur(10px);
+                padding: 2rem;
+                border-radius: 12px;
+                border-left: 4px solid #5a9fb8;
+                text-align: center;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#5a9fb8"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="margin: 0 auto 1.5rem"
+              >
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                <path
+                  d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                />
+              </svg>
+              <h3
+                style="color: #2c5f77; font-size: 1.5rem; margin-bottom: 1rem"
+              >
+                Teaching God's Word
+              </h3>
+              <p style="color: #4a7c8f; line-height: 1.7">
+                Committed to teaching God's Word with authenticity and
+                compassion, the ministry focuses on making biblical truth
+                accessible and relevant to everyday life.
+              </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="about-card"
+              style="
+                background: rgba(255, 255, 255, 0.7);
+                backdrop-filter: blur(10px);
+                padding: 2rem;
+                border-radius: 12px;
+                border-left: 4px solid #5a9fb8;
+                text-align: center;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#5a9fb8"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="margin: 0 auto 1.5rem"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+              <h3
+                style="color: #2c5f77; font-size: 1.5rem; margin-bottom: 1rem"
+              >
+                Building Community
+              </h3>
+              <p style="color: #4a7c8f; line-height: 1.7">
+                Dedicated to building strong families, nurturing faith, and
+                creating a welcoming community where everyone belongs and can
+                grow in their relationship with Christ.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="ministry"><!-- Ministry details --></section>
     </main>
-    <footer><!-- Copyright or contact info --></footer>
+
+    <footer
+      style="
+        background: linear-gradient(to bottom, #2c3e50, #1a252f);
+        color: white;
+        padding: 4rem 2rem 2rem;
+      "
+    >
+      <div class="container">
+        <!-- Get in Touch Form -->
+        <div style="max-width: 600px; margin: 0 auto 3rem">
+          <h3
+            style="
+              text-align: center;
+              margin-bottom: 0.5rem;
+              font-size: 2rem;
+              color: #fff;
+            "
+          >
+            Get in Touch
+          </h3>
+          <p
+            style="
+              text-align: center;
+              color: rgba(255, 255, 255, 0.7);
+              margin-bottom: 2rem;
+            "
+          >
+            We'd love to hear from you
+          </p>
+
+          <form>
+            <div style="margin-bottom: 1rem">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                style="
+                  width: 100%;
+                  padding: 0.75rem;
+                  border-radius: 6px;
+                  border: 1px solid rgba(255, 255, 255, 0.2);
+                  background: rgba(255, 255, 255, 0.1);
+                  color: white;
+                "
+              />
+            </div>
+            <div style="margin-bottom: 1rem">
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+                style="
+                  width: 100%;
+                  padding: 0.75rem;
+                  border-radius: 6px;
+                  border: 1px solid rgba(255, 255, 255, 0.2);
+                  background: rgba(255, 255, 255, 0.1);
+                  color: white;
+                "
+              />
+            </div>
+            <div style="margin-bottom: 1.5rem">
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                rows="5"
+                required
+                style="
+                  width: 100%;
+                  padding: 0.75rem;
+                  border-radius: 6px;
+                  border: 1px solid rgba(255, 255, 255, 0.2);
+                  background: rgba(255, 255, 255, 0.1);
+                  color: white;
+                  resize: vertical;
+                "
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              style="
+                width: 100%;
+                padding: 0.875rem;
+                background: #5a9fb8;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background 0.3s;
+              "
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Footer Info -->
+        <div
+          style="
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+          "
+        >
+          <p
+            style="
+              color: rgba(255, 255, 255, 0.6);
+              font-size: 0.9rem;
+              margin: 0;
+            "
+          >
+            &copy; <span id="year"></span> Rev. Bennywood Ministries. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- script for date -->
     <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Scripts for animation -->
+    <script>
+      // Register GSAP plugins
+      gsap.registerPlugin(ScrollTrigger);
 
       // H2: Scale up with rotation from left
       gsap.from("#hero hgroup h2", {
@@ -36,7 +339,7 @@
         rotation: -15,
         opacity: 0,
         ease: "back.out(1.7)",
-        transformOrigin: "center center"
+        transformOrigin: "center center",
       });
 
       // P: Bounce in from below with rotation
@@ -48,7 +351,45 @@
         opacity: 0,
         delay: 0.7,
         ease: "elastic.out(1, 0.95)",
-        transformOrigin: "center center"
+        transformOrigin: "center center",
+      });
+
+      // Button: Fade in with scale
+      gsap.from("#btn-hero", {
+        duration: 1.2,
+        scale: 0,
+        opacity: 0,
+        delay: 1.2,
+        ease: "back.out(1.7)",
+      });
+
+      // Smooth scroll to about section on button click
+      document
+        .getElementById("btn-hero")
+        .addEventListener("click", function () {
+          gsap.to(window, {
+            duration: 1.5,
+            scrollTo: {
+              y: "#about",
+              offsetY: 0,
+            },
+            ease: "power3.inOut",
+          });
+        });
+
+      // About section cards entrance animation
+      gsap.from(".about-card", {
+        scrollTrigger: {
+          trigger: "#about",
+          start: "top 80%",
+          toggleActions: "play none none none"
+        },
+        y: 80,
+        opacity: 0,
+        scale: 0.9,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power3.out"
       });
     </script>
   </body>
